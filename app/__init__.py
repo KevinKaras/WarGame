@@ -1,6 +1,6 @@
 from flask import Flask
 from app.config import Config
-from .models import db  
+from .models import db, User
 from flask_migrate import Migrate
 
 print(Flask)
@@ -13,4 +13,7 @@ Migrate(app, db)
 
 @app.route('/')
 def Home():
-    return "<div>SAMPLE APP</div>"
+    
+    user = User.query.all()
+    print(user)
+    return "<div>NOT BAD</div>"
