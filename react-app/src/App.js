@@ -12,9 +12,15 @@ function App() {
           {/* <SignUp /> */}
         </div>
         <div className="Game">
-          {/* <Deck1 /> */}
-          {/* <CardDisplay /> */}
-          {/* <Deck2 /> */}
+          <div className='Upper-Deck'>
+            {/* <Deck1 /> */}
+          </div>
+          <div className='Card-Display'>
+            {/* <CardDisplay /> */}
+          </div>
+          <div className='Lower-Deck'>
+            {/* <Deck2 /> */}
+          </div>
         </div>
       </div>
       <div className='Right-Side'>

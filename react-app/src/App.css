@@ -1,10 +1,10 @@
 
 .App{
     display:flex;
-    
+
     background-color: rgb(58, 58, 58);
-    height:100vh;
-    width: 100vw;
+    height:100%;
+    width: 100%;
 }
 
 .User-Bar{
@@ -14,9 +14,34 @@
 }
 
 .Game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
     background-color: rgba(0, 206, 3, 0.933);
     height:85vh;
     width: 70vw;
+}
+
+.Upper-Deck{
+    background-color: rgba(246, 255, 0, 0.933);
+    height:25vh;
+    width: 65vw;
+    
+}
+
+.Card-Display{
+    background-color: rgba(246, 255, 0, 0.933);
+    height:25vh;
+    width: 65vw;
+    
+}
+
+.Lower-Deck{
+    background-color: rgba(246, 255, 0, 0.933);
+    height:25vh;
+    width: 65vw;
+    
 }
 
 .LeaderBoard{
