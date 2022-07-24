@@ -1,15 +1,16 @@
 
 .App{
     display:flex;
-
-    background-color: rgb(58, 58, 58);
-    height:100%;
-    width: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 98vw;
+    height: 98vh;
+    background-color: black;
 }
 
 .User-Bar{
     background-color: rgba(150, 150, 150, 0.933);
-    height:15vh;
+    height:12.5vh;
     width: 70vw;
 }
 
@@ -19,33 +20,33 @@
     align-items: center;
     justify-content: space-around;
     background-color: rgba(0, 206, 3, 0.933);
-    height:85vh;
+    height:80vh;
     width: 70vw;
 }
 
 .Upper-Deck{
     background-color: rgba(246, 255, 0, 0.933);
-    height:25vh;
+    height:22.5vh;
     width: 65vw;
     
 }
 
 .Card-Display{
     background-color: rgba(246, 255, 0, 0.933);
-    height:25vh;
+    height:22.5vh;
     width: 65vw;
     
 }
 
 .Lower-Deck{
     background-color: rgba(246, 255, 0, 0.933);
-    height:25vh;
+    height:22.5vh;
     width: 65vw;
     
 }
 
 .LeaderBoard{
     background-color: rgba(17, 0, 255, 0.933);
-    height:100vh;
-    width: 30vw;
+    height:92.5vh;
+    width: 25vw;
 }
