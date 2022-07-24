@@ -1,0 +1,70 @@
+
+.Sign-Up-Container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(199, 36, 36);
+    height:12.5vh;
+    width: 70vw;
+}
+
+.Player-Name-Form{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height:8vh;
+    width: 65vw;
+}
+
+.Player-1-Input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(115, 255, 0);
+    height:5vh;
+    width: 10vw;
+    margin-left: 2.5vw;
+    margin-right: 0.5vw;
+}
+
+.Player-1-Name{
+    height:2vh;
+    width: 10vw;
+}
+
+.Player-2-Input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(115, 255, 0);
+    height:5vh;
+    width: 10vw;
+    margin-left: 0.5vw;
+    margin-right: 1.5vw;
+}
+
+.Player-2-Name{
+    height:2vh;
+    width: 10vw;
+}
+
+
+.Button-Container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(115, 255, 0);
+    height:5vh;
+    width: 10vw;
+    margin-left: 2vw;
+    margin-right: 2.5vw;
+}
+
+.Sign-Up-Button{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: rgb(24, 149, 39);
+    height:5vh;
+    width: 10vw;
+    border-radius: 0.2em;
+}

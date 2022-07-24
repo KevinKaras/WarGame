@@ -1,4 +1,4 @@
-function CardDisplay() {
+function CardDisplay(props) {
 
 
 

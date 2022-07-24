@@ -1,4 +1,4 @@
-function Deck2() {
+function Deck2(props) {
 
 
 

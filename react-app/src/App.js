@@ -7,7 +7,7 @@ import LeaderBoard from './components/LeaderBoard';
 import SignUp from './components/SignUp';
 
 function App() {
-
+    
 
 
 
