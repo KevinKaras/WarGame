@@ -2,7 +2,9 @@ from flask import Flask
 from app.config import Config
 from .models import db, Score
 from flask_migrate import Migrate
+from .forms.SignUpForm import SignUpForm
 
+print(SignUpForm)
 print(Flask)
 
 app = Flask(__name__)
@@ -18,8 +20,17 @@ def Home():
     # GRAB ALL USERS 
     # FOR LEADERBOARD
     scores = Score.query.all()
-    return 
+    return {"score": score.to_dict() for score in scores}
 
+@app.route('/SignUp')
+def SignUp():
+    # GRAB INFO FROM REQUEST
+    # CREATE SIGNUPFORM WITH INFO FROM REQUEST
+    # MAKE NEW ADDITION TO DATABASE, COMMIT CHANGES
+    form = SignUpForm()
+    
+    
+    return 
 
 
 # @app.route('/')
