@@ -1,6 +1,6 @@
 import './CSS/SignUp.css'
 import { useEffect, useState } from "react";
-function SignUp() {
+function SignUp(props) {
 
     let [name1, setName1] = useState('Player 1 Name')
     let [name2, setName2] = useState('Player 2 Name')
@@ -19,7 +19,7 @@ function SignUp() {
             body: formData
         })
         setSignedUpState(true)
-        console.log(signedUpState, "STATE AFTER CHANGE")
+        props.props()
         
     }
     useEffect(()=> {

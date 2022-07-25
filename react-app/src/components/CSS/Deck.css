@@ -1,0 +1,48 @@
+.Deck-Area-Container{
+    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:22.5vh;
+    width:65vw
+}
+
+.Player-Container{
+    background-color: rgb(193, 193, 250);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 2.8em;
+    height:3vh;
+    width:10vw
+}
+.Player-Name{
+    background-color: rgb(86, 86, 86);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    height:3vh;
+    width:10vw
+}
+
+.Deck-Area{
+    background-color: rgb(205, 205, 234);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:10vh;
+    width:60vw
+}
+.Card-Container{
+    background-color: rgb(71, 200, 93);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0.1em;
+    height:3.75vh;
+    width:0.90vw;
+    border-radius: 0.1em;
+}
