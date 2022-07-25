@@ -17,6 +17,7 @@ flask = "*"
 flask-sqlalchemy = "*"
 wtforms = "*"
 flask-wtf = "*"
+flask-cors = "*"
 
 [dev-packages]
 
