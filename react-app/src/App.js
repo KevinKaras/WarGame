@@ -19,7 +19,6 @@ function App() {
   let [player1DeckSize, setPlayer1DeckSize] = useState(26)
   let [player2DeckSize, setPlayer2DeckSize] = useState(26)
   let [gameStatus, setGameStatus] = useState(false)
-
   const onLoad = async () => {
     let response = await fetch('http://127.0.0.1:5000/')
     let res = await response.json()
