@@ -1,9 +1,17 @@
+import './CSS/LeaderBoard.css';
+
+
+
 function LeaderBoard() {
 
 
 
     return (
-      <>LeaderBoard</>
+      <div className='LeaderBoard-Container'>
+        <div className='LeaderBoard-Title-Container'>
+          <div className='LeaderBoard-Title-Text'>LEADERBOARD</div>
+        </div>
+      </div>
     );
   }
   

@@ -23,7 +23,7 @@ def Home():
     # GRAB ALL USERS 
     # FOR LEADERBOARD
     scores = Score.query.all()
-    return {"score": score.to_dict() for score in scores}
+    return {"score": [score.to_dict() for score in scores]}
 
 @app.route('/signup', methods=["POST"])
 def SignUp():
