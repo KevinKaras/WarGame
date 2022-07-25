@@ -19,8 +19,8 @@ function SignUp(props) {
             body: formData
         })
         setSignedUpState(true)
-        props.props()
-        
+        props.props.onLoad()
+        props.props.setCurPlayers([name1, name2])
     }
     useEffect(()=> {
 

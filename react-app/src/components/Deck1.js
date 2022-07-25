@@ -1,8 +1,9 @@
 import {useEffect, useState} from 'react'
 import CardDisplay from './CardDisplay'
 import './CSS/Deck.css'
+
 function Deck1(props) {
-  let [deckLength, setDeckLength] = useState(props.props)
+  let [deckLength, setDeckLength] = useState(props.props.player1DeckSize)
   let [cards, setCards] = useState([])
   
   const onLoad = () =>{
@@ -25,7 +26,7 @@ function Deck1(props) {
     <div className="Deck-Area-Container">
       <div className="Player-Container">
         <div className='Player-Name'>
-          
+          {props.props.curPlayers[0]}
         </div>
       </div>
       {deckLength && 

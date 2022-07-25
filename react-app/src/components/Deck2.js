@@ -3,7 +3,8 @@ import CardDisplay from './CardDisplay'
 import './CSS/Deck.css'
 
 function Deck2(props) {
-  let [deckLength, setDeckLength] = useState(50)
+  console.log(props)
+  let [deckLength, setDeckLength] = useState(props.props.player2DeckSize)
   let [cards, setCards] = useState([])
   
   const onLoad = () =>{
@@ -26,7 +27,7 @@ function Deck2(props) {
     <div className="Deck-Area-Container">
       <div className="Player-Container">
         <div className='Player-Name'>
-          
+          {props.props.curPlayers[1]}
         </div>
       </div>
       {deckLength && 

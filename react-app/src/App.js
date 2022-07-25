@@ -13,6 +13,7 @@ function App() {
   let [users, setUsers] = useState([])
   let [userLoading, setUserLoading] = useState(true)
   let [names, setNames] = useState([])
+  let [curPlayers, setCurPlayers] = useState([])
   let [namesLoading, setNamesLoading] = useState(true)
   let [deck, setDeck] = useState(ShuffledDeck)
   let [player1DeckSize, setPlayer1DeckSize] = useState(26)
@@ -34,7 +35,7 @@ function App() {
     })
     setNames(usersJSX)
   }
-  
+
 
   useEffect(()=>{
     onLoad()
@@ -44,17 +45,17 @@ function App() {
     <div className="App">
       <div className='Left-Side'>
         <div className='User-Bar'>
-          <SignUp props={onLoad}/>
+          <SignUp props={{onLoad, setCurPlayers}}/>
         </div>
         <div className="Game">
           <div className='Upper-Deck'>
-            <Deck1 props={player1DeckSize}/>
+            <Deck1 props={{player1DeckSize, curPlayers}}/>
           </div>
           <div className='Card-Display'>
             <CardDisplay />
           </div>
           <div className='Lower-Deck'>
-            <Deck2 props={player2DeckSize}/>
+            <Deck2 props={{player2DeckSize, curPlayers}}/>
           </div>
         </div>
       </div>
