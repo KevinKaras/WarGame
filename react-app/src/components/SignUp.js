@@ -4,6 +4,7 @@ function SignUp() {
 
     let [name1, setName1] = useState('')
     let [name2, setName2] = useState('')
+    let [winAmt, setWinAmt] = useState('')
 
 
     const onCreate = async (event) => {
@@ -11,10 +12,10 @@ function SignUp() {
 
         let formData = new FormData()
 
-        formData.append(name1)
-        formData.append(name2)
+        formData.append("name1", name1)
+        formData.append("name2", name2)
 
-        let response = await fetch("/signup", {
+        let response = await fetch("http://127.0.0.1:5000/signup", {
             method: "POST",
             body: formData
         })
@@ -43,7 +44,7 @@ function SignUp() {
                     ></input>
                 </div>
                 <div className="Button-Container">
-                    <button className="Sign-Up-Button">Start Game</button>
+                    <button className="Sign-Up-Button" type="Submit">Start Game</button>
                 </div>
             </form>
             
