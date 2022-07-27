@@ -2,12 +2,12 @@ import {useEffect, useState} from 'react'
 import CardDisplay from './CardDisplay'
 import './CSS/Deck.css'
 
-function Deck2(props) {
+function Deck2({props}) {
   let [cards, setCards] = useState([])
   
   const onLoad = () =>{
     let cardsCol = []
-    for(let i = 0; i < props.props.player2DeckSize; i++){
+    for(let i = 0; i < props.player2DeckSize; i++){
       cardsCol.push(
         (<div className='Card-Container'>
           <div className='Card-Square'></div>
@@ -19,16 +19,16 @@ function Deck2(props) {
 
   useEffect(()=>{
     onLoad()
-  }, [props.props.player2DeckSize])
+  }, [props.player2DeckSize, props.curPlayers])
 
   return (
     <div className="Deck-Area-Container">
       <div className="Player-Container">
         <div className='Player-Name'>
-          {props.props.curPlayers[1]}
+          {props.curPlayers[1]}
         </div>
       </div>
-      {props.props.player2DeckSize && 
+      {props.player2DeckSize && 
         <div className='Deck-Area'>
           {[cards]}
         </div>

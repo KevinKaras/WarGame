@@ -15,14 +15,16 @@ function App() {
   let [names, setNames] = useState([])
   let [curPlayers, setCurPlayers] = useState([])
   let [namesLoading, setNamesLoading] = useState(true)
-  let [deck, setDeck] = useState(ShuffledDeck)
-  let [player1DeckSize, setPlayer1DeckSize] = useState(26)
-  let [player2DeckSize, setPlayer2DeckSize] = useState(26)
+  let [deck, setDeck] = useState(ShuffledDeck.slice(0,10))
+  let [player1DeckSize, setPlayer1DeckSize] = useState(5)
+  let [player2DeckSize, setPlayer2DeckSize] = useState(5)
   let [player1CardDeck, setPlayer1CardDeck] = useState([])
   let [player2CardDeck, setPlayer2CardDeck] = useState([])
   let [gameStatus, setGameStatus] = useState(false)
+  let [finished, setFinished] = useState(false)
   let [warStatus, setWarStatus] = useState(false)
   let [deckDisplay, setDeckDisplay] = useState([])
+  let [winner, setWinner] = useState('')
 
   
 
@@ -41,26 +43,6 @@ function App() {
     })
     setNames(usersJSX)
   }
-
-  // Create Function Start Game
-  // - Splits deck in 2
-  // - update Deck1 for P1, update Deck2 for P2
-  // v|
-
-  // Create function Deal Hand
-  // - Has both players deck
-  // if(DeckDisplay.length === 0)
-    // - pops() top card from player1Deck, player2Deck = [p1card1, p2card2]
-    // - setDeckDisplay(p1card1, p2card2)
-    // - return
-  // if(DeckDisplay.length > 0)
-    // if(DeckDisplay[0].value > DeckDisplay[1].value )
-      // - setPlayer1Card(state => [...state, ...DeckDisplay])
-    // if(DeckDisplay[0].value < DeckDisplay[1].value )
-      // - setPlayer2Card(state => [...state, ...DeckDisplay])
-  // - pops() top card from player1Deck, player2Deck = [p1card1, p2card2]
-  // - setDeckDisplay(p1card1, p2card2)
-
 
   const DealHand = async () => {
     if(deckDisplay.length === 0){
@@ -112,9 +94,29 @@ function App() {
   const StartGame = async () => {
     let deck1 = deck.slice(0, deck.length/2)
     let deck2 = deck.slice(deck.length/2)
+    setPlayer1CardDeck(deck1)
+    setPlayer1DeckSize(5)
+    setPlayer2CardDeck(deck2)
+    setPlayer2DeckSize(5)
+    setFinished(false)
+    setWarStatus(false)
+    setWinner('')
+    setGameStatus(true)
+  }
+
+  const RestartGame = async () => {
+    let deck1 = deck.slice(0, deck.length/2)
+    let deck2 = deck.slice(deck.length/2)
 
     setPlayer1CardDeck(deck1)
+    setPlayer1DeckSize(5)
     setPlayer2CardDeck(deck2)
+    setPlayer2DeckSize(5)
+    setFinished(false)
+    setWarStatus(false)
+    setWinner('')
+    setGameStatus(true)
+    setCurPlayers([])
   }
   
 
@@ -124,28 +126,57 @@ function App() {
 
   return (
     <div className="App">
-      <div className='Left-Side'>
-        <div className='User-Bar'>
-          <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck, StartGame}}/>
-        </div>
-        <div className="Game">
-          <div className='Upper-Deck'>
-            <Deck1 props={{player1DeckSize, curPlayers}}/>
-          </div>
-          <div className='Card-Display'>
-            {/* HAVE POOL OF CARDS IN DECK POOL FOR CD, SHOW EVERY OTHER CARD? */}
-            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus, DealHand, setDeckDisplay, setPlayer1CardDeck, setPlayer2CardDeck}}/>
-          </div>
-          <div className='Lower-Deck'>
-            <Deck2 props={{player2DeckSize, curPlayers}}/>
+      {finished && 
+        <div className="Winning-Screen">
+          <div className='Congratulations-Container'>
+            <div className='Congratulations'>{`PLAYER ${winner} WON!`}</div>
+            <div className='Restart-Button-Container'>
+              <button className='Restart-Button' onClick={RestartGame}>
+                Restart
+              </button>
+            </div>
+            <div className='For-Fun'>loser has to drink a shot</div>
           </div>
         </div>
+      }
+      { !finished &&
+        <>
+          <div className='Left-Side'>
+            <div className='User-Bar'>
+              <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck, StartGame}}/>
+            </div>
+          <div className="Game">
+            <div className='Upper-Deck'>
+              <Deck1 props={{player1DeckSize, curPlayers}}/>
+            </div>
+            <div className='Card-Display'>
+              <CardDisplay props={{
+                deckDisplay, 
+                gameStatus, 
+                setGameStatus, 
+                DealHand, 
+                setDeckDisplay, 
+                setPlayer1CardDeck,
+                player1DeckSize,
+                setPlayer2CardDeck, 
+                player2DeckSize,
+                setWinner,
+                curPlayers,
+                setFinished}}/>
+            </div>
+            <div className='Lower-Deck'>
+             <Deck2 props={{player2DeckSize, curPlayers}}/>
+            </div>
+          </div>
       </div>
       <div className='Right-Side'>
         <div className='LeaderBoard'>
           <LeaderBoard props={{users,names,userLoading,namesLoading}}/>
         </div>
       </div>
+        </>
+      }
+      
       
     </div>
   );

@@ -2,15 +2,29 @@ import "./CSS/CardDisplay.css"
 import { useEffect, useState } from 'react';
 
 
-function CardDisplay(props) {
+function CardDisplay({props}) {
 
   let [curCards, setCurCards] = useState([])
-  
+
   const onLoad = () =>{
-    if(props.props.deckDisplay.length === undefined){
+    if(props.player1DeckSize === 0){
+      props.setFinished(true)
+      props.setWinner(props.curPlayers[1])
+      props.setGameStatus(state => !state)
+      props.setDeckDisplay([])
+      return
+    } else if (props.player2DeckSize === 0){
+      props.setFinished(true)
+      props.setWinner(props.curPlayers[0])
+      props.setGameStatus(state => !state)
+      props.setDeckDisplay([])
       return
     }
-    let cards = props.props.deckDisplay.map((card) =>{
+
+    if(props.deckDisplay.length === undefined){
+      return
+    }
+    let cards =props.deckDisplay.map((card) =>{
         return (
                 <div key={card.ID} className="Card-Face">
                   <div className="Card-Top">
@@ -29,13 +43,14 @@ function CardDisplay(props) {
                )
       })
       setCurCards(cards)
+      props.setFinished(false)
   }
 
 
 
   useEffect(()=>{
     onLoad()
-  }, [props.props.deckDisplay]) 
+  }, [props.deckDisplay]) 
 
 
   return (
@@ -49,8 +64,8 @@ function CardDisplay(props) {
       </div>
       <div className="Card-Display-SubContainer-Right">
         <div className='Next-Play-Button-Container'>
-          { props.props.gameStatus && 
-            <button className='Next-Play-Button' onClick={props.props.DealHand}>
+          { props.gameStatus && 
+            <button className='Next-Play-Button' onClick={props.DealHand}>
               Deal Hand
             </button>
           }

@@ -1,6 +1,6 @@
 import './CSS/SignUp.css'
 import { useEffect, useState } from "react";
-function SignUp(props) {
+function SignUp({props}) {
 
     let [name1, setName1] = useState('Player 1 Name')
     let [name2, setName2] = useState('Player 2 Name')
@@ -19,10 +19,10 @@ function SignUp(props) {
             body: formData
         })
         setSignedUpState(true)
-        props.props.onLoad()
-        props.props.setCurPlayers([name1, name2])
-        props.props.setGameStatus(state => !state)
-        props.props.StartGame()
+        props.onLoad()
+        props.setCurPlayers([name1, name2])
+        props.setGameStatus(state => !state)
+        props.StartGame()
     }
     useEffect(()=> {
 

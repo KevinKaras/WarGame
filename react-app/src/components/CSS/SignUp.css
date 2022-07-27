@@ -3,7 +3,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(199, 36, 36);
+    /* background-color: rgb(199, 36, 36); */
     height:12.5vh;
     width: 70vw;
 }
@@ -12,8 +12,7 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: rgb(255, 255, 255);
-    height:8vh;
+    height:10vh;
     width: 65vw;
 }
 
@@ -21,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(115, 255, 0);
+    /* background-color: rgb(115, 255, 0);  */
     height:5vh;
     width: 10vw;
     margin-left: 2.5vw;
@@ -29,15 +28,16 @@
 }
 
 .Player-1-Name{
-    height:2vh;
+    height:3.5vh;
     width: 10vw;
+    font-size: larger;
 }
 
 .Player-2-Input{
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(115, 255, 0);
+    /* background-color: rgb(115, 255, 0); */
     height:5vh;
     width: 10vw;
     margin-left: 0.5vw;
@@ -45,8 +45,9 @@
 }
 
 .Player-2-Name{
-    height:2vh;
+    height:3.5vh;
     width: 10vw;
+    font-size: larger;
 }
 
 
@@ -59,14 +60,15 @@
     width: 10vw;
     margin-left: 2vw;
     margin-right: 2.5vw;
+    border-radius: 0.4em;
 }
 
 .Sign-Up-Button{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-color: rgb(24, 149, 39);
+    background-color: #61D095;
     height:5vh;
     width: 10vw;
-    border-radius: 0.2em;
+    border-radius: 0.4em;
 }
 
 
@@ -74,16 +76,18 @@
     display:flex;
     justify-content:space-around;
     align-items: center;
-    background-color: rgb(199, 36, 36);
+    /* background-color: rgb(199, 36, 36); */
+    border-bottom: 2px solid black;
+    margin-left: 1.25em;
     height:12.5vh;
-    width: 70vw;
+    width: 67.5vw;
 }
 
 .Player-1-Display{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(196, 199, 36);
+    background-color: #E0BAD7;
     height:5vh;
     width:10vw;
 }
@@ -91,7 +95,7 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(196, 199, 36);
+    background-color: #E0BAD7;
     height:5vh;
     width:10vw;
 }

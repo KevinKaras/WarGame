@@ -1,5 +1,5 @@
 .Deck-Area-Container{
-    background-color: blue;
+    background-color: #439775;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -27,10 +27,12 @@
     height:3vh;
     width:10vw;
     font-size: larger;
+    color: #ffffff;
+    font-weight: 800;
 }
 
 .Deck-Area{
-    background-color: rgb(205, 205, 234);
+    background-color: #48BF84;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,7 +40,7 @@
     width:60vw
 }
 .Card-Container{
-    background-color: rgb(71, 200, 93);
+    background-color: #2A4747;
     display: flex;
     justify-content: center;
     align-items: center;
