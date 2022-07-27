@@ -9,7 +9,7 @@
 }
 
 .Player-Container{
-    background-color: rgb(193, 193, 250);
+    /* background-color: rgb(193, 193, 250); */
     display: flex;
     justify-content: flex-start;
     align-items: center;

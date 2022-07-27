@@ -24,9 +24,11 @@ function Deck1({props}) {
   return (
     <div className="Deck-Area-Container">
       <div className="Player-Container">
+        {props?.curPlayers[0] &&
         <div className='Player-Name'>
-          {props.curPlayers[0]}
+          {`${props.curPlayers[0][0]}`}
         </div>
+        }
       </div>
       {props.player1DeckSize && 
         <div className='Deck-Area'>

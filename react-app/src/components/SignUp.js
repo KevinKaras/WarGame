@@ -18,9 +18,11 @@ function SignUp({props}) {
             method: "POST",
             body: formData
         })
+
+        let res = await response.json()
         setSignedUpState(true)
         props.onLoad()
-        props.setCurPlayers([name1, name2])
+        props.setCurPlayers([[res.Scores[0].name, res.Scores[0].id], [res.Scores[1].name,res.Scores[1].id]])
         props.setGameStatus(state => !state)
         props.StartGame()
     }

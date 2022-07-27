@@ -24,9 +24,11 @@ function Deck2({props}) {
   return (
     <div className="Deck-Area-Container">
       <div className="Player-Container">
+      {props?.curPlayers[1] &&
         <div className='Player-Name'>
-          {props.curPlayers[1]}
+          {`${props.curPlayers[1][0]}`}
         </div>
+        }
       </div>
       {props.player2DeckSize && 
         <div className='Deck-Area'>
