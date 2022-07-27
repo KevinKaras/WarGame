@@ -33,7 +33,8 @@ function App() {
     let res = await response.json()
     setUsers(res.score)
     setUserLoading(false)
-    let usersJSX = res.score.map((user) =>{
+    let sorted = res.score.sort((a,b) => b.wins - a.wins)
+    let usersJSX = sorted.map((user) =>{
       return (
               <div key={user.id} className="UserContainer">
                 <div className="User-Name">{user.name}</div>
@@ -123,7 +124,7 @@ function App() {
 
   useEffect(()=>{
     onLoad()
-  }, [deckDisplay])
+  }, [deckDisplay, names])
 
   return (
     <div className="App">
@@ -172,7 +173,7 @@ function App() {
       </div>
       <div className='Right-Side'>
         <div className='LeaderBoard'>
-          <LeaderBoard props={{users,names,userLoading,namesLoading}}/>
+          <LeaderBoard props={{users,names,userLoading,namesLoading, setNames}}/>
         </div>
       </div>
         </>

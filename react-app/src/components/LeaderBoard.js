@@ -3,7 +3,10 @@ import { useEffect, useState } from "react";
 
 
 
-function LeaderBoard(props) {
+function LeaderBoard({props}) {
+
+  useEffect(() =>{
+  }, [props.names])
 
     return (
       <div className='LeaderBoard-Container'>
@@ -12,9 +15,9 @@ function LeaderBoard(props) {
         </div>
         <div className='LeaderBoard-Name-Container'>
           <div className='Leaderboard-Names'>
-            { props?.props?.namesLoading && props?.props?.names && 
+            { props.namesLoading && props.names && 
               <div>
-                {[props.props.names]}
+                {[props.names]}
               </div>
             }
           </div>
