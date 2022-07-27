@@ -51,9 +51,12 @@ function CardDisplay(props) {
       </div>
       <div className="Card-Display-SubContainer-Right">
         <div className='Next-Play-Button-Container'>
-          <button className='Next-Play-Button' onClick={props.props.nextPlay}>
-            Next Play
-          </button>
+          { props.props.gameStatus && 
+            <button className='Next-Play-Button'>
+              Next Play
+            </button>
+          }
+          
         </div>
       </div>
       

@@ -4,12 +4,11 @@ function SignUp(props) {
 
     let [name1, setName1] = useState('Player 1 Name')
     let [name2, setName2] = useState('Player 2 Name')
-    let [winAmt, setWinAmt] = useState('')
+    // let [winAmt, setWinAmt] = useState('')
     let [signedUpState, setSignedUpState] = useState(false)
 
     const onCreate = async (event) => {
         event.preventDefault()
-        props.props.nextPlay()
         let formData = new FormData()
 
         formData.append("name1", name1)

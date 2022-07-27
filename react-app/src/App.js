@@ -18,8 +18,12 @@ function App() {
   let [deck, setDeck] = useState(ShuffledDeck)
   let [player1DeckSize, setPlayer1DeckSize] = useState(26)
   let [player2DeckSize, setPlayer2DeckSize] = useState(26)
+  let [player1CardDeck, setPlayer1CardDeck] = useState([])
+  let [player2CardDeck, setPlayer2CardDeck] = useState([])
   let [gameStatus, setGameStatus] = useState(false)
+  let [warStatus, setWarStatus] = useState(false)
   let [deckDisplay, setDeckDisplay] = useState([])
+
   
 
   const onLoad = async () => {
@@ -37,22 +41,6 @@ function App() {
     })
     setNames(usersJSX)
   }
-
-  // state -> haveWon, war -> 
-  //            |
-  //            V
-  //          Reallocate
-  //          Cards
-
-  const nextPlay = () =>{
-    // SPLIT THE DECK INTO USER1/USER2 DECK
-
-    let card1 = deck.pop()
-    let card2 = deck.pop()
-
-    setDeckDisplay(state => [...state, card1, card2])
-
-  }
   
 
   useEffect(()=>{
@@ -63,7 +51,7 @@ function App() {
     <div className="App">
       <div className='Left-Side'>
         <div className='User-Bar'>
-          <SignUp props={{onLoad, setCurPlayers, setGameStatus, nextPlay}}/>
+          <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck}}/>
         </div>
         <div className="Game">
           <div className='Upper-Deck'>
@@ -71,7 +59,7 @@ function App() {
           </div>
           <div className='Card-Display'>
             {/* HAVE POOL OF CARDS IN DECK POOL FOR CD, SHOW EVERY OTHER CARD? */}
-            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus, nextPlay}}/>
+            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus}}/>
           </div>
           <div className='Lower-Deck'>
             <Deck2 props={{player2DeckSize, curPlayers}}/>
