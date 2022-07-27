@@ -5,8 +5,6 @@ import { useEffect, useState } from "react";
 
 function LeaderBoard(props) {
 
-  console.log("LEEADER PROPS", props.props)
-
     return (
       <div className='LeaderBoard-Container'>
         <div className='LeaderBoard-Title-Container'>

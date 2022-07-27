@@ -1,261 +1,261 @@
 const FreshDeck = [
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 2,
         "Value": 2
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 3,
         "Value": 3
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 4,
         "Value": 4
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 5,
         "Value": 5
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 6,
         "Value": 6
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 7,
         "Value": 7
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 8,
         "Value": 8
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 9,
         "Value": 9
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": 10,
         "Value": 10
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": "J",
         "Value": 11
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": "Q",
         "Value": 12
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": "K",
         "Value": 13
     },
     {
-        "Suit": "Diamond",
+        "Suit": "♢",
         "ID": "A",
         "Value": 14
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 2,
         "Value": 2
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 3,
         "Value": 3
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 4,
         "Value": 4
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 5,
         "Value": 5
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 6,
         "Value": 6
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 7,
         "Value": 7
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 8,
         "Value": 8
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 9,
         "Value": 9
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": 10,
         "Value": 10
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": "J",
         "Value": 11
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": "Q",
         "Value": 12
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": "K",
         "Value": 13
     },
     {
-        "Suit": "Hearts",
+        "Suit": "♡",
         "ID": "A",
         "Value": 14
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 2,
         "Value": 2
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 3,
         "Value": 3
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 4,
         "Value": 4
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 5,
         "Value": 5
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 6,
         "Value": 6
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 7,
         "Value": 7
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 8,
         "Value": 8
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 9,
         "Value": 9
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": 10,
         "Value": 10
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": "J",
         "Value": 11
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": "Q",
         "Value": 12
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": "K",
         "Value": 13
     },
     {
-        "Suit": "Clubs",
+        "Suit": "♧",
         "ID": "A",
         "Value": 14
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 2,
         "Value": 2
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 3,
         "Value": 3
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 4,
         "Value": 4
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 5,
         "Value": 5
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 6,
         "Value": 6
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 7,
         "Value": 7
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 8,
         "Value": 8
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 9,
         "Value": 9
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": 10,
         "Value": 10
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": "J",
         "Value": 11
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": "Q",
         "Value": 12
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": "K",
         "Value": 13
     },
     {
-        "Suit": "Spades",
+        "Suit": "♤",
         "ID": "A",
         "Value": 14
     }

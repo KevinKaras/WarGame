@@ -19,6 +19,9 @@ function App() {
   let [player1DeckSize, setPlayer1DeckSize] = useState(26)
   let [player2DeckSize, setPlayer2DeckSize] = useState(26)
   let [gameStatus, setGameStatus] = useState(false)
+  let [deckDisplay, setDeckDisplay] = useState([])
+  
+
   const onLoad = async () => {
     let response = await fetch('http://127.0.0.1:5000/')
     let res = await response.json()
@@ -34,24 +37,46 @@ function App() {
     })
     setNames(usersJSX)
   }
+  // const onTurn = async () => {
 
+  // }
+
+  // Make function, that sets DeckDisplay to equal the new cards popped from the deck.
+
+  // state -> haveWon, war -> 
+  //            |
+  //            V
+  //          Reallocate
+  //          Cards
+  
+  const nextPlay = () =>{
+    // SPLIT THE DECK INTO USER1/USER2 DECK
+
+    let card1 = deck.pop()
+    let card2 = deck.pop()
+
+    setDeckDisplay(state => [...state, card1, card2])
+
+  }
+  
 
   useEffect(()=>{
     onLoad()
-  }, [])
+  }, [deckDisplay])
 
   return (
     <div className="App">
       <div className='Left-Side'>
         <div className='User-Bar'>
-          <SignUp props={{onLoad, setCurPlayers}}/>
+          <SignUp props={{onLoad, setCurPlayers, setGameStatus, nextPlay}}/>
         </div>
         <div className="Game">
           <div className='Upper-Deck'>
             <Deck1 props={{player1DeckSize, curPlayers}}/>
           </div>
           <div className='Card-Display'>
-            <CardDisplay />
+            {/* HAVE POOL OF CARDS IN DECK POOL FOR CD, SHOW EVERY OTHER CARD? */}
+            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus, nextPlay}}/>
           </div>
           <div className='Lower-Deck'>
             <Deck2 props={{player2DeckSize, curPlayers}}/>

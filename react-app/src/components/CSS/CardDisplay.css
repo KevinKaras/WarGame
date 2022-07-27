@@ -1,0 +1,110 @@
+.Card-Display-Container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(47, 0, 255);
+    height: 22.5vh;
+    width:65vw;
+}
+
+
+.Card-Display-SubContainer-Right{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    height: 22.5vh;
+    width:16.25vw;
+}
+.Card-Display-SubContainer-Left{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(47, 0, 255);
+    height: 22.5vh;
+    width:48.75vw;
+}
+
+.Card-Display{
+    background-color: aqua;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 22.5vh;
+    width:48.75vw;
+}
+
+.Cards{
+    background-color: blueviolet;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 22.5vh;
+    width:48.75vw;
+}
+
+.Card-Face{
+    background-color: chartreuse;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 12vh;
+    width: 5vw;
+    border-radius: 0.25em;
+    margin: 1em;
+}
+
+.Card-Top{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+    width: 4.5vw;
+}
+.Card-Suit{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+    width: 2.25vw;
+}
+
+.Card-Value{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+    width: 2.25vw;
+}
+.Card-Middle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+    width: 4.5vw;
+}
+
+.Card-Bottom{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:5vh;
+    width:4.5vw;
+}
+
+.Next-Play-Button-Container{
+    background-color: rgb(228, 228, 228);
+    height:5.5vh;
+    width:10vw;
+    border-radius: 0.25em;
+}
+
+.Next-Play-Button{
+    font-size: larger;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: darkgreen;
+    height:5.5vh;
+    width:10vw;
+    border-radius: 0.25em;
+}

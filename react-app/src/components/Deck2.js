@@ -4,6 +4,7 @@ import './CSS/Deck.css'
 
 function Deck2(props) {
   let [cards, setCards] = useState([])
+  
   const onLoad = () =>{
     let cardsCol = []
     for(let i = 0; i < props.props.player2DeckSize; i++){

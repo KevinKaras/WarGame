@@ -9,6 +9,7 @@ function SignUp(props) {
 
     const onCreate = async (event) => {
         event.preventDefault()
+        props.props.nextPlay()
         let formData = new FormData()
 
         formData.append("name1", name1)
@@ -21,6 +22,7 @@ function SignUp(props) {
         setSignedUpState(true)
         props.props.onLoad()
         props.props.setCurPlayers([name1, name2])
+        props.props.setGameStatus(state => !state)
     }
     useEffect(()=> {
 
