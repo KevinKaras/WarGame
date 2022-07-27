@@ -19,7 +19,7 @@ function Deck1(props) {
 
   useEffect(()=>{
     onLoad()
-  }, [])
+  }, [props.props.player1DeckSize])
 
   return (
     <div className="Deck-Area-Container">

@@ -41,6 +41,61 @@ function App() {
     })
     setNames(usersJSX)
   }
+
+  // Create Function Start Game
+  // - Splits deck in 2
+  // - update Deck1 for P1, update Deck2 for P2
+  // v|
+
+  // Create function Deal Hand
+  // - Has both players deck
+  // if(DeckDisplay.length === 0)
+    // - pops() top card from player1Deck, player2Deck = [p1card1, p2card2]
+    // - setDeckDisplay(p1card1, p2card2)
+    // - return
+  // if(DeckDisplay.length > 0)
+    // if(DeckDisplay[0].value > DeckDisplay[1].value )
+      // - setPlayer1Card(state => [...state, ...DeckDisplay])
+    // if(DeckDisplay[0].value < DeckDisplay[1].value )
+      // - setPlayer2Card(state => [...state, ...DeckDisplay])
+  // - pops() top card from player1Deck, player2Deck = [p1card1, p2card2]
+  // - setDeckDisplay(p1card1, p2card2)
+
+
+  const DealHand = async () => {
+    if(deckDisplay.length === 0){
+      let p1Card1 = player1CardDeck.slice(0,1)[0]
+      let p2Card2 = player2CardDeck.slice(0,1)[0]
+      setPlayer1CardDeck(player1CardDeck.slice(1))
+      setPlayer2CardDeck(player2CardDeck.slice(1))
+      setPlayer1DeckSize(state => state -= 1)
+      setPlayer2DeckSize(state => state -= 1)
+
+      setDeckDisplay([p1Card1, p2Card2])
+      return
+    }
+    if(deckDisplay.length > 0){
+      if(deckDisplay[0].Value > deckDisplay[1].Value ){
+        setPlayer1CardDeck(state => [...state, ...deckDisplay])
+        setPlayer1DeckSize(state => state += 2)
+        setDeckDisplay([])
+      }
+      if(deckDisplay[0].Value < deckDisplay[1].Value ){
+        setPlayer2CardDeck(state => [...state, ...deckDisplay])
+        setPlayer2DeckSize(state => state += 2)
+        setDeckDisplay([])
+      }
+    }
+  }
+
+
+  const StartGame = async () => {
+    let deck1 = deck.slice(0, deck.length/2)
+    let deck2 = deck.slice(deck.length/2)
+
+    setPlayer1CardDeck(deck1)
+    setPlayer2CardDeck(deck2)
+  }
   
 
   useEffect(()=>{
@@ -51,7 +106,7 @@ function App() {
     <div className="App">
       <div className='Left-Side'>
         <div className='User-Bar'>
-          <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck}}/>
+          <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck, StartGame}}/>
         </div>
         <div className="Game">
           <div className='Upper-Deck'>
@@ -59,7 +114,7 @@ function App() {
           </div>
           <div className='Card-Display'>
             {/* HAVE POOL OF CARDS IN DECK POOL FOR CD, SHOW EVERY OTHER CARD? */}
-            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus}}/>
+            <CardDisplay props={{deckDisplay, gameStatus, setGameStatus, DealHand, setDeckDisplay, setPlayer1CardDeck, setPlayer2CardDeck}}/>
           </div>
           <div className='Lower-Deck'>
             <Deck2 props={{player2DeckSize, curPlayers}}/>

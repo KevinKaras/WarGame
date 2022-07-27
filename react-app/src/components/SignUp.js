@@ -22,6 +22,7 @@ function SignUp(props) {
         props.props.onLoad()
         props.props.setCurPlayers([name1, name2])
         props.props.setGameStatus(state => !state)
+        props.props.StartGame()
     }
     useEffect(()=> {
 

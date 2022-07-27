@@ -6,8 +6,6 @@ function CardDisplay(props) {
 
   let [curCards, setCurCards] = useState([])
   
-  console.log("FIRST RENDER OF PROPS", props)
-  
   const onLoad = () =>{
     if(props.props.deckDisplay.length === undefined){
       return
@@ -30,9 +28,9 @@ function CardDisplay(props) {
                 </div>
                )
       })
-      console.log("CARDS AFTER WORK", cards)
-      setCurCards(state => [...state, cards])
+      setCurCards(cards)
   }
+
 
 
   useEffect(()=>{
@@ -52,8 +50,8 @@ function CardDisplay(props) {
       <div className="Card-Display-SubContainer-Right">
         <div className='Next-Play-Button-Container'>
           { props.props.gameStatus && 
-            <button className='Next-Play-Button'>
-              Next Play
+            <button className='Next-Play-Button' onClick={props.props.DealHand}>
+              Deal Hand
             </button>
           }
           
