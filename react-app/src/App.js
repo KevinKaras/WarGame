@@ -74,18 +74,38 @@ function App() {
       setDeckDisplay([p1Card1, p2Card2])
       return
     }
-    if(deckDisplay.length > 0){
-      if(deckDisplay[0].Value > deckDisplay[1].Value ){
+    if(deckDisplay.length > 0 && !warStatus){
+      
+      if(deckDisplay[deckDisplay.length-2].Value > deckDisplay[deckDisplay.length-1].Value){
         setPlayer1CardDeck(state => [...state, ...deckDisplay])
-        setPlayer1DeckSize(state => state += 2)
+        setPlayer1DeckSize(state => state += deckDisplay.length)
         setDeckDisplay([])
+        setWarStatus(false)
       }
-      if(deckDisplay[0].Value < deckDisplay[1].Value ){
+      if(deckDisplay[deckDisplay.length-2].Value < deckDisplay[deckDisplay.length-1].Value){
         setPlayer2CardDeck(state => [...state, ...deckDisplay])
-        setPlayer2DeckSize(state => state += 2)
+        setPlayer2DeckSize(state => state += deckDisplay.length)
         setDeckDisplay([])
+        setWarStatus(false)
+      }
+      if(deckDisplay[deckDisplay.length-2].Value === deckDisplay[deckDisplay.length-1].Value){
+        setWarStatus(true)
       }
     }
+
+    if(deckDisplay.length > 0 && warStatus){
+      let p1Card1 = player1CardDeck.slice(0,2)                        // [p1Card1, p1Card2]
+      let p2Card2 = player2CardDeck.slice(0,2)                        // [p2Card1, p2Card2]
+      setPlayer1CardDeck(player1CardDeck.slice(2))
+      setPlayer2CardDeck(player2CardDeck.slice(2))
+      setPlayer1DeckSize(state => state -= 2)
+      setPlayer2DeckSize(state => state -= 2)
+
+      setDeckDisplay(state => [...state, ...p1Card1, ...p2Card2])     //  [card1, card2]  => [card1, card2, p1Card1, p1Card2, p2Card1, p2Card2]
+      setWarStatus(false)
+    }
+
+    
   }
 
 
