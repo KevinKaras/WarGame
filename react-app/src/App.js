@@ -37,18 +37,13 @@ function App() {
     })
     setNames(usersJSX)
   }
-  // const onTurn = async () => {
-
-  // }
-
-  // Make function, that sets DeckDisplay to equal the new cards popped from the deck.
 
   // state -> haveWon, war -> 
   //            |
   //            V
   //          Reallocate
   //          Cards
-  
+
   const nextPlay = () =>{
     // SPLIT THE DECK INTO USER1/USER2 DECK
 
