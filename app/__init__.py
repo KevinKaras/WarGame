@@ -19,7 +19,7 @@ CORS(app)
 
 
 # HOME ROUTE
-@app.route('/')
+@app.route('/api/')
 def Home():
 
     # GRAB ALL SCORES
@@ -27,7 +27,7 @@ def Home():
     scores = Score.query.all()
     return {"score": [score.to_dict() for score in scores]}
 
-@app.route('/signup', methods=["POST"])
+@app.route('/api/signup', methods=["POST"])
 def SignUp():
     # GRAB INFO FROM REQUEST
     # CREATE SIGNUPFORM WITH INFO FROM REQUEST
@@ -64,7 +64,7 @@ def SignUp():
     
     return {"Scores": [score.to_dict() for score in scores]}
 
-@app.route('/win/<int:id>')
+@app.route('/api/win/<int:id>')
 def Winner(id):
     print(id)
     MatchedFirst = Score.query.filter(Score.id == id).one()
