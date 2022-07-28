@@ -8,7 +8,7 @@ function CardDisplay({props}) {
 
   const onLoad = () =>{
     if(props.player1DeckSize === 0){
-      let response = fetch(`http://127.0.0.1:5000/api/win/${props.curPlayers[1][1]}`)
+      let response = fetch(`/api/win/${props.curPlayers[1][1]}`)
 
       props.setFinished(true)
       props.setWinner(props.curPlayers[1][0])
@@ -17,7 +17,7 @@ function CardDisplay({props}) {
       return
     } else if (props.player2DeckSize === 0){
 
-      let response = fetch(`http://127.0.0.1:5000/api/win/${props.curPlayers[0][1]}`)
+      let response = fetch(`/api/win/${props.curPlayers[0][1]}`)
 
       props.setFinished(true)
       props.setWinner(props.curPlayers[0][0])

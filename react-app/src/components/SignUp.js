@@ -14,7 +14,7 @@ function SignUp({props}) {
         formData.append("name1", name1)
         formData.append("name2", name2)
 
-        let response = await fetch("http://127.0.0.1:5000/api/signup", {
+        let response = await fetch("/api/signup", {
             method: "POST",
             body: formData
         })

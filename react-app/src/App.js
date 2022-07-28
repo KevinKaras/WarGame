@@ -29,9 +29,7 @@ function App() {
   
 
   const onLoad = async () => {
-    let response = await fetch('http://127.0.0.1:5000/api/',{
-      'mode': 'no-cors'
-    })
+    let response = await fetch('/api')
     let res = await response.json()
     setUsers(res.score)
     setUserLoading(false)
