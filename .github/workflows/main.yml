@@ -14,6 +14,6 @@ jobs:
     - name: Login to Heroku Container registry
       run: heroku container:login
     - name: Build and push
-      run: heroku container:push -a kk-wargame web
+      run: heroku container:push web -a kk-wargame
     - name: Release
-      run: heroku container:release -a kk-wargame web
+      run: heroku container:release web -a kk-wargame 
