@@ -44,7 +44,8 @@
 ## RUNNING THE APP
 
   - Download the repo, unzip the file, you should have the main directory on your desktop.
-  - Open Terminal 1 and navigate to the WarGame directory, once inside, navigate to the 'react-app' directory
-    - Once inside, run the command 'npm start', this will spin up the front end to display the react components for you.
-  - With Terminal 1 still running, open another Terminal 2, and navigate to the WarGame directory, then to the 'app' directory.
-    - Once inside, run the command 'pipenv run flask run', this will spin up the backend server for you to begin playing.
+  - Open Terminal 1 and navigate to the WarGame directory
+    - Once inside, run the command 'npm install'
+    - Once complete, navigate into the react-app folder, and run 'npm install' again, then run 'npm start', this will spin up the front end         to display the react components for you.
+  - With Terminal 1 still running, open another Terminal 2, and navigate to the WarGame directory, then to the 'WarGame' directory.
+    - Once inside, run the command 'pipenv install', this will spin up the backend server for you to begin playing.
