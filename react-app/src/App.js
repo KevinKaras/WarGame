@@ -29,7 +29,7 @@ function App() {
   
 
   const onLoad = async () => {
-    let response = await fetch('/api')
+    let response = await fetch('/api/')
     let res = await response.json()
     setUsers(res.score)
     setUserLoading(false)
