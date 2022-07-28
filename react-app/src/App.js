@@ -43,7 +43,6 @@ function App() {
              )
     })
     setNames(usersJSX)
-    console.log(curPlayers) 
   }
 
   const DealHand = async () => {
