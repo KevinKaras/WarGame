@@ -96,9 +96,9 @@ function App() {
     let deck1 = deck.slice(0, deck.length/2)
     let deck2 = deck.slice(deck.length/2)
     setPlayer1CardDeck(deck1)
-    setPlayer1DeckSize(5)
+    setPlayer1DeckSize(26)
     setPlayer2CardDeck(deck2)
-    setPlayer2DeckSize(5)
+    setPlayer2DeckSize(26)
     setFinished(false)
     setWarStatus(false)
     setWinner('')
@@ -110,9 +110,9 @@ function App() {
     let deck2 = deck.slice(deck.length/2)
 
     setPlayer1CardDeck(deck1)
-    setPlayer1DeckSize(5)
+    setPlayer1DeckSize(26)
     setPlayer2CardDeck(deck2)
-    setPlayer2DeckSize(5)
+    setPlayer2DeckSize(26)
     setFinished(false)
     setWarStatus(false)
     setWinner('')
@@ -120,15 +120,15 @@ function App() {
     setCurPlayers([])
   }
 
-  const ChangeCardAmt = async () => {
-    if(player1DeckSize <= 5 && player2DeckSize <= 5){
-      setPlayer1DeckSize(26)
-      setPlayer2DeckSize(26)
-    } else {
-      setPlayer1DeckSize(5)
-      setPlayer2DeckSize(5)
-    }
-  }
+  // const ChangeCardAmt = async () => {
+  //   if(player1DeckSize <= 5 && player2DeckSize <= 5){
+  //     setPlayer1DeckSize(26)
+  //     setPlayer2DeckSize(26)
+  //   } else {
+  //     setPlayer1DeckSize(5)
+  //     setPlayer2DeckSize(5)
+  //   }
+  // }
   
 
   useEffect(()=>{
@@ -156,9 +156,6 @@ function App() {
           <div className='Left-Side'>
             <div className='User-Bar'>
               <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck, StartGame}}/>
-            </div>
-            <div className='Change-Card-Amount-Container'>
-              <button className='Change-Card-Amount' onclick={ChangeCardAmt}>Change Card Amount</button>
             </div>
           <div className="Game">
             <div className='Upper-Deck'>
