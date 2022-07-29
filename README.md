@@ -46,6 +46,7 @@
   - Deck size changer button to swap between a 26 card deck, an 8 card deck, and a 5 card deck, to fine tune user experience.
   - Removal of usernames from leaderboards, for the people who cant stand to see their buddy's reign over their score
   - Input validations to prevent too short/long of names
+  - Heroku side testing capabilities. Testing worked on local machine, but upon pushing to heroku, the original project ran into bizarre errors near the     completion of the project. Currently the main focus of this project is figuring out why the app struggles to run on my local machine again after         pushing to heroku.
 
 ## RUNNING THE APP
 
