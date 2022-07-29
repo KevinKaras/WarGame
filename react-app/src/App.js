@@ -16,8 +16,8 @@ function App() {
   let [curPlayers, setCurPlayers] = useState([])
   let [namesLoading, setNamesLoading] = useState(true)
   let [deck, setDeck] = useState(ShuffledDeck.slice(0,10))
-  let [player1DeckSize, setPlayer1DeckSize] = useState(5)
-  let [player2DeckSize, setPlayer2DeckSize] = useState(5)
+  let [player1DeckSize, setPlayer1DeckSize] = useState(26)
+  let [player2DeckSize, setPlayer2DeckSize] = useState(26)
   let [player1CardDeck, setPlayer1CardDeck] = useState([])
   let [player2CardDeck, setPlayer2CardDeck] = useState([])
   let [gameStatus, setGameStatus] = useState(false)
@@ -119,6 +119,16 @@ function App() {
     setGameStatus(true)
     setCurPlayers([])
   }
+
+  const ChangeCardAmt = async () => {
+    if(player1DeckSize <= 5 && player2DeckSize <= 5){
+      setPlayer1DeckSize(26)
+      setPlayer2DeckSize(26)
+    } else {
+      setPlayer1DeckSize(5)
+      setPlayer2DeckSize(5)
+    }
+  }
   
 
   useEffect(()=>{
@@ -146,6 +156,9 @@ function App() {
           <div className='Left-Side'>
             <div className='User-Bar'>
               <SignUp props={{onLoad, setCurPlayers, setGameStatus, deck, setPlayer1CardDeck, setPlayer2CardDeck, StartGame}}/>
+            </div>
+            <div className='Change-Card-Amount-Container'>
+              <button className='Change-Card-Amount' onclick={ChangeCardAmt}>Change Card Amount</button>
             </div>
           <div className="Game">
             <div className='Upper-Deck'>
