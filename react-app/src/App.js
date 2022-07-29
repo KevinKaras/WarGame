@@ -15,7 +15,7 @@ function App() {
   let [names, setNames] = useState([])
   let [curPlayers, setCurPlayers] = useState([])
   let [namesLoading, setNamesLoading] = useState(true)
-  let [deck, setDeck] = useState(ShuffledDeck.slice(0,10))
+  let [deck, setDeck] = useState(ShuffledDeck.slice(0,16))
   let [player1DeckSize, setPlayer1DeckSize] = useState(8)
   let [player2DeckSize, setPlayer2DeckSize] = useState(8)
   let [player1CardDeck, setPlayer1CardDeck] = useState([])
