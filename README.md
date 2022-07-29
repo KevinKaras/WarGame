@@ -49,6 +49,8 @@
 
 ## RUNNING THE APP
 
+If the game reaches and infinite loop scenario, which is very possible, refresh the game, enter the same username's and resume playing.
+
 Go to the link https://kk-wargame.herokuapp.com/ , otherwise if that doesn't work, then follow these steps and it should work, email me at kevinkaras2@gmail.com if there are any errors.
 
   - Download the repo, unzip the file, you should have the main directory on your desktop.
