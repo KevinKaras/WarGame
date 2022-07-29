@@ -123,7 +123,8 @@ function App() {
 
   useEffect(()=>{
     onLoad()
-  }, [deckDisplay, names])
+  }, [deckDisplay, finished, curPlayers])
+  // Finished -> Names
 
   return (
     <div className="App">

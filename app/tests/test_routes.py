@@ -1,5 +1,5 @@
 # from flask import Flask
-# from app.config import Config
+# from .config import Config
 # from flask_cors import CORS
 # from app.models import db, Score
 # from flask_migrate import Migrate
