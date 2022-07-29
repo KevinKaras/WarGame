@@ -41,7 +41,15 @@
       - Then 1 more card is then placed on the table, to be compared. 
       - Winner of war obtains every card drawn during the war.
 
+## Things I want to add at a later date
+  - Deck randomizer on every hand deal to prevent 'infinite loop games'
+  - Deck size changer button to swap between a 26 card deck, an 8 card deck, and a 5 card deck, to fine tune user experience.
+  - Removal of usernames from leaderboards, for the people who cant stand to see their buddy's reign over their score
+  - Input validations to prevent too short/long of names
+
 ## RUNNING THE APP
+
+Go to the link https://kk-wargame.herokuapp.com/ , otherwise if that doesn't work, then follow these steps and it should work, email me at kevinkaras2@gmail.com if there are any errors.
 
   - Download the repo, unzip the file, you should have the main directory on your desktop.
   - Open Terminal 1 and navigate to the WarGame directory
